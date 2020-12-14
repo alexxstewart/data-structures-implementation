@@ -39,9 +39,7 @@ class LinkedList:
         self.headNode = self.headNode.reference
 
     def deleteEnd(self):
-        if(self.headNode is None):
-            self.headNode = None
-        else:
+        if self.headNode is not None:
             currentNode = self.headNode
             lastNode = None
             while True:
