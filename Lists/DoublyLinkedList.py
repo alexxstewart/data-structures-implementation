@@ -1,9 +1,10 @@
-class LinkedList:
-
+class DoublyLinkedList:
+    
     class Node:
-        def __init__(self, reference=None, value=None):
+        def __init__(self, forwardReference=None, backwardReference=None , value=None):
             self.value = value
-            self.reference = reference
+            self.forwardReference = forwardReference
+            self.backwardReference = backwardReference
 
     def __init__(self):
         self.headNode = None
@@ -12,7 +13,7 @@ class LinkedList:
         currentNode = self.headNode
         while currentNode is not None:
             print(currentNode.value)
-            currentNode = currentNode.reference
+            currentNode = currentNode.forwardReference
 
     def addToStart(self, value):
         if(self.headNode is not None):
@@ -30,23 +31,6 @@ class LinkedList:
                 if currentNode is None:
                     node = self.Node(None, value)
                     lastNode.reference = node
-                    break
-                else:
-                    lastNode = currentNode
-                    currentNode = currentNode.reference
-
-    def deleteStart(self):
-        self.headNode = self.headNode.reference
-
-    def deleteEnd(self):
-        if(self.headNode is None):
-            self.headNode = None
-        else:
-            currentNode = self.headNode
-            lastNode = None
-            while True:
-                if currentNode.reference is None:
-                    lastNode.reference = None
                     break
                 else:
                     lastNode = currentNode
