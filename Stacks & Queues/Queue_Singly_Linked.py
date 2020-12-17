@@ -1,8 +1,8 @@
-class Singly_Linked_Queue:
-    
-    class Empty(Exception):
-        '''List empty'''
-        pass
+class Empty(Exception):
+    '''List empty'''
+    pass
+
+class SinglyLinkedQueue:
     
     class Node:
         def __init__(self, value, next):
@@ -44,7 +44,13 @@ class Singly_Linked_Queue:
             return element
         else:
             raise(self.Empty('Empty list'))
+
+    # this method prints the first element in the queue
+    def frist(self):
+        if not self._is_empty():
+            return self._head._value
     
+    # this method prints the queue from the first element to the last
     def printQueue(self):
         if not self._is_empty():
             element = self._head

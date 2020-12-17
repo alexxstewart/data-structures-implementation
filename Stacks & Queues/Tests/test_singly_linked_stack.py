@@ -1,9 +1,9 @@
 import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 
-import Stack_Singly_Linked
+import stack_singly_linked
 
-s = Stack_Singly_Linked.Singly_Linked_Stack()
+s = stack_singly_linked.SinglyLinkedStack()
 s.push(3)
 s.push(4)
 s.printStack()
@@ -27,8 +27,5 @@ s.pop()
 s.pop()
 s.pop()
 s.pop()
-s.pop()
-s.pop()
-s.pop()
-s.pop()
-s.pop()
+print(s.size())
+print(s.top())
