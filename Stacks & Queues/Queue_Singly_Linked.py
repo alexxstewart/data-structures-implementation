@@ -42,6 +42,8 @@ class Singly_Linked_Queue:
             element = self._head
             self._head = element._next
             return element
+        else:
+            raise(self.Empty('Empty list'))
     
     def printQueue(self):
         if not self._is_empty():
@@ -49,3 +51,5 @@ class Singly_Linked_Queue:
             while element is not None:
                 print(element._value)
                 element = element._next
+        else:
+            raise(self.Empty('Empty list'))
