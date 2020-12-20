@@ -61,6 +61,15 @@ The list implementation is much more complicated than the singly linked list imp
 | is_empty  | O(1)    |
 |-----------|---------|
 
-* Most operations are in constant time, however some operations
+* Most operations are in constant time, however some operations, similar to the list implemented stack are in O(n) time because of array resizing.
 
 ## Singly Linked List Implementation
+
+The singly linked list implementation uses nodes to keep track of the data and the references to other nodes. There is a reference to the head and a reference to the tail. This means that adding elements to the front and deleting elements from the front takes constant time. The add operation for the last element of the array is also a constant time operation. To delete the last element is a linear time operation.
+
+# Dequeue
+
+A Dequeue is a queue but we can add and delete elements on both sides of the queue. We pronounce it 'deck' as to not collide the with delete operation dequeue. We have the same operations as the queue but we can now add to the front and we can delete from the rear. The addition to the front is a constant time operation, and the deletion from the rear is a linear time operation.
+
+## List Implementation
+
