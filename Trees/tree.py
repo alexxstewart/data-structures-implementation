@@ -26,16 +26,19 @@ class Tree:
 
     def is_root(self, node):
         # returns whether the node is the root node
-        pass
+        return node == self.root
 
     def is_leaf(self, node):
         # returns whether the node is a leaf node
-        pass
+        return node.children == None
 
     def is_empty(self):
         # returns true if the tree is empty
-        pass
+        return self.root is not None
 
     def depth(self, node):
         # returns the depth of the tree from node to root
-        pass
+        if is_root(node):
+            return 0
+        else:
+            return 1 + depth(node.parent)

@@ -1,12 +1,16 @@
-class LinkedBinaryTree:
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+
+import Tree
+
+class LinkedBinaryTree(Tree):
 
     class _Node:
-        pass
+        def __init__(self, parent=None):
+            self._parent = parent
 
     def __init__(self):
         pass
-
-    
 
     def parent(self):
         pass
